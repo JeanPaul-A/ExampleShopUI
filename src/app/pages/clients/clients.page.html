@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clients</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-card-header>
+        <ion-row class="header">
+          <ion-col> ID </ion-col>
+          <ion-col> NAME </ion-col>
+          <ion-col> EMAIL </ion-col>
+          <ion-col> PASSWORD </ion-col>
+        </ion-row>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row *ngFor="let client of clients">
+          <ion-col> {{client.clientID}} </ion-col>
+          <ion-col> {{client.name}} </ion-col>
+          <ion-col> {{client.email}} </ion-col>
+          <ion-col> {{client.password}} </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-grid>
+  </ion-card>
+</ion-content>

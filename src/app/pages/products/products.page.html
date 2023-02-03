@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-grid>
+    
+  </ion-grid>
+  <ion-card *ngFor="let product of products">
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title> {{product.name}} </ion-card-title>
+      <ion-card-subtitle> S/.{{product.price}} </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{product.description}}
+    </ion-card-content>
+  </ion-card> -->
+
+  <ion-card>
+    <ion-grid>
+      <ion-card-header>
+        <ion-row class="header">
+          <ion-col> ID </ion-col>
+          <ion-col> NAME </ion-col>
+          <ion-col> DESCRIPTION </ion-col>
+          <ion-col> CATEGORY </ion-col>
+          <ion-col> PRICE </ion-col>
+          <ion-col> STOCK </ion-col>
+          <ion-col> ADD </ion-col>
+        </ion-row>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row *ngFor="let product of products">
+          <ion-col> {{product.productId}} </ion-col>
+          <ion-col> {{product.name}} </ion-col>
+          <ion-col> {{product.description}} </ion-col>
+          <ion-col> {{product.category}} </ion-col>
+          <ion-col> {{product.price}} </ion-col>
+          <ion-col> {{product.stock}} </ion-col>
+          <ion-col >
+            <ion-buttons style="place-content: center;">
+              <ion-button style=" align-items: center;">
+                <ion-icon name="cart" slot="end"  class="button"> </ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-grid>
+  </ion-card>
+</ion-content>
